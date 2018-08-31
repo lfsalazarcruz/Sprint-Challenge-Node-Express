@@ -18,7 +18,7 @@ router.get('/:id/actions', (req, res) => {
     projectModel.getProjectActions(req.params.id)
     .then(project => {
         if( project.length === 0) {
-            res.status(404).json({ error: 'Project do not exists.' })
+            res.status(404).json({ error: 'Project do not exist.' })
         }
         else {
             res.status(200).json({project});
@@ -45,7 +45,7 @@ router.post('/', async (req, res) => {
             });
         }
     } else {
-        res.status(422).json({ errorMessage: 'Please provide name and descritpion for the project. The name must have less than 128 characters' });
+        res.status(422).json({ errorMessage: 'Please provide name and description for the project. The name must have less than 128 characters' });
     }
 });
 
