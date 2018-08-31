@@ -16,4 +16,4 @@ server.use(cors());
 server.use('/projects', projectRoutes);
 server.use('/actions', actionRoutes);
 
-server.listen(PORT, () => console.log(`API on port ${PORT}`))
+server.listen(PORT, () => console.log( `API on port ${PORT}` ))
